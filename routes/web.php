@@ -40,3 +40,7 @@ Route::post('/update/{id}','ProductController@update')->name('updateproduct');
 
 // delete 
 Route::get('delete/{id}','ProductController@delete')->name('deleteproduct');
+
+// categories routes
+// show all categories
+Route::get('/categories','CategoryController@index')->name('allcategories');
