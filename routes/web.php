@@ -53,3 +53,9 @@ Route::get('/addcategories','CategoryController@create')->name('addcategories');
 
 // store category
 Route::post('/storecategories','CategoryController@store')->name('storecategories');
+
+// edit category
+Route::get('/editcategories/{id}','CategoryController@edit')->name('editcategories');
+
+// update category
+Route::post('/updatecategories/{id}','CategoryController@update')->name('updatecategories');

@@ -33,6 +33,25 @@ class CategoryController extends Controller
         // return back();
         return redirect( route('allcategories') );
     }
+
+
+    public function edit($id){
+        $category= category::findOrFail($id);
+        return view('category.edit',compact('category'));
+    }
+
+
+    public function update(request $request,$id){
+
+        $category= category::findOrFail($id)->update([
+            'title' => $request->title,
+            'description' => $request->description
+        ]);
+
+        return redirect( route('singlecategory', $id) );
+
+
+    }
 }
 
 

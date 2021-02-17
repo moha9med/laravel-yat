@@ -9,7 +9,7 @@
         <div class="card-body">
             <h5 class="card-title">{{ $category->title }}</h5>
             <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            <a href="#" class="btn btn-sm btn-primary">Edit Category</a>
+            <a href="{{ route('editcategories',$category->id) }}" class="btn btn-sm btn-primary">Edit Category</a>
             <a href="{{ route('allcategories') }}" class="btn btn-sm btn-success">Return to all categories</a>
             <a href="#" class="btn btn-sm btn-danger">Delete Category</a>
         </div>
