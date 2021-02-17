@@ -59,3 +59,6 @@ Route::get('/editcategories/{id}','CategoryController@edit')->name('editcategori
 
 // update category
 Route::post('/updatecategories/{id}','CategoryController@update')->name('updatecategories');
+
+// delete category
+Route::get('/deletecategory/{id}','CategoryController@delete')->name('deletecategory');

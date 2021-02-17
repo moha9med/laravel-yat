@@ -52,6 +52,14 @@ class CategoryController extends Controller
 
 
     }
+
+
+    public function delete($id){
+
+        category::findOrFail($id)->delete();
+        return redirect( route('allcategories'));
+
+    }
 }
 
 
