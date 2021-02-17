@@ -44,3 +44,6 @@ Route::get('delete/{id}','ProductController@delete')->name('deleteproduct');
 // categories routes
 // show all categories
 Route::get('/categories','CategoryController@index')->name('allcategories');
+
+// display single category
+Route::get('/category/{id}','CategoryController@show')->name('singlecategory');
