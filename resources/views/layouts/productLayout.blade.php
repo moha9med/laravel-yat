@@ -30,6 +30,10 @@
                     <li class="nav-item">
                         <a class="nav-link {{ Request::fullUrl() == route('addProducts') ?'active':'' }}" href="{{route('addProducts')}}">Add Product</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link {{ Request::fullUrl() == route('allcategories') ?'active':'' }}" href="{{route('allcategories')}}">Categories</a>
+                    </li>
+                    
 
                 </ul>
             </div>
