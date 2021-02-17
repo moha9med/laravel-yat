@@ -18,6 +18,21 @@ class CategoryController extends Controller
         $category = Category::find($id);
         return view('category.category',compact('category'));
     }
+
+    public function create(){
+        return view('category.create');
+    }
+
+    public function store(Request $request){
+
+        Category::create([
+            'title' => $request->title,
+            'description' => $request->description
+        ]);
+
+        // return back();
+        return redirect( route('allcategories') );
+    }
 }
 
 

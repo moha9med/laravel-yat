@@ -30,7 +30,7 @@ Route::get('/products/{id}','ProductController@show')->name('singleProduct');
 Route::get('/addproducts','ProductController@add')->name('addProducts');
 
 // store data
-Route::post('/store','ProductController@store')->name('storeproducts');
+Route::post('/storeproducts','ProductController@store')->name('storeproducts');
 
 // edit form
 Route::get('/editproduct/{id}','ProductController@edit')->name('editproduct');
@@ -47,3 +47,9 @@ Route::get('/categories','CategoryController@index')->name('allcategories');
 
 // display single category
 Route::get('/category/{id}','CategoryController@show')->name('singlecategory');
+
+// create category
+Route::get('/addcategories','CategoryController@create')->name('addcategories');
+
+// store category
+Route::post('/storecategories','CategoryController@store')->name('storecategories');
