@@ -32,7 +32,7 @@ class ProductController extends Controller
 
         $request->validate([
             'title'=> 'required',
-            'description'=>'required | max:15',
+            'description'=>'required',
             'price'=>'required | integer'
         ]);
 
@@ -61,6 +61,12 @@ class ProductController extends Controller
 
     // updat method
     public function update(Request $request, $id){
+
+        $request->validate([
+            'title'=> 'required',
+            'description'=>'required',
+            'price'=>'required | integer'
+        ]);
 
         $product = Product::findOrFail($id)->update([
             'title' => $request->title,
