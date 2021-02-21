@@ -1,0 +1,20 @@
+realtions:
+
+1-1 one to one (users & profiles)
+
+user hasone profile
+profile belognto one user
+
+1-* one to many (users & posts)
+user hasmany posts
+post belongto one user
+
+*-* many to many (users & roles)
+
+user hasmany roles 
+role belongto many users
+
+
+3 tables ..... 2 relations (one to many)
+
+
