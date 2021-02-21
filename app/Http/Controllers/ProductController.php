@@ -33,19 +33,25 @@ class ProductController extends Controller
         $request->validate([
             'title'=> 'required',
             'description'=>'required',
-            'price'=>'required | integer'
+            'price'=>'required | integer',
+            'image'=> 'image'
         ]);
 
-        // $title = $request->title;
-        // $description = $request->description;
-        // $price = $request->price;
+        // move image to public folder and save it name in database 
+        $img = $request->file('image');
+       $imagename = $request->file('image')->getClientOriginalName();
+        $img->move( public_path('images/products') ,$imagename);
+
+
         // 1- store data into db
         Product::Create([
             'title'=> $request->title,
             'description'=> $request->description,
-            'price'=> $request->price
+            'price'=> $request->price,
+            'image'=> $request->file('image')->getClientOriginalName(),
         ]);
 
+       
         // 2- redirct to any other view
         return redirect(  route('allproducts') );
     }

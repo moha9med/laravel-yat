@@ -6,6 +6,7 @@
         <h1><span>{{ $product->id }}-</span>Product Title: {{ $product->title }}</h1>
         <p>Product Description: {{ $product->description }}</p>
         <p>Product Price: {{ $product->price }}</p>
+        <img src='{{ asset("images/products/$product->imgname") }}' alt="">
     </div>
     <div class="row my-3">
         <div class="col">
