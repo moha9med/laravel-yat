@@ -9,6 +9,11 @@
         <div class="card-body">
             <h5 class="card-title">{{ $category->title }}</h5>
             <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+            <ul>
+                @foreach ($category->products as $cproducts)
+                    <li><a href="{{ route('singleProduct',$cproducts->id) }}">{{$cproducts->title}}</a></li>
+                @endforeach
+            </ul>
             <a href="{{ route('editcategories',$category->id) }}" class="btn btn-sm btn-primary">Edit Category</a>
             <a href="{{ route('allcategories') }}" class="btn btn-sm btn-success">Return to all categories</a>
             <a href="{{ route('deletecategory',$category->id) }}" class="btn btn-sm btn-danger">Delete Category</a>
