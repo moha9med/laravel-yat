@@ -18,3 +18,10 @@ role belongto many users
 3 tables ..... 2 relations (one to many)
 
 
+..................................
+1- customers table (id => primary key)
+2- rooms           (id => primary key)
+3- reservations    (id => primary key) (customer_id & room_id)
+
+$table->foriegnId('customer_id)->constrained('customers'); 
+$table->foriegnId('room_id)->constrained('rooms'); 

@@ -30,6 +30,12 @@ class ProductController extends Controller
     // method to store data
     public function store(Request $request){
 
+        $request->validate([
+            'title'=> 'required',
+            'description'=>'required | max:15',
+            'price'=>'required | integer'
+        ]);
+
         // $title = $request->title;
         // $description = $request->description;
         // $price = $request->price;
