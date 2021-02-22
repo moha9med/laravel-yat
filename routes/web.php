@@ -65,3 +65,5 @@ Route::get('/deletecategory/{id}','CategoryController@delete')->name('deletecate
 
 
 // comment
+// comment
+// comment
