@@ -62,3 +62,6 @@ Route::post('/updatecategories/{id}','CategoryController@update')->name('updatec
 
 // delete category
 Route::get('/deletecategory/{id}','CategoryController@delete')->name('deletecategory');
+
+
+// comment
